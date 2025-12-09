@@ -10,9 +10,8 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Absolute path to registry JSON
-const registryPath = path.join(__dirname, "../registry/contentRegistry.json");
+const registryPath = path.join(__dirname, "../server/registry/contentRegistry.json");
 
-// Load registry on startup
 let registry = {};
 try {
   const raw = fs.readFileSync(registryPath, "utf8");

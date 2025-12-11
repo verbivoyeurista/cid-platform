@@ -1,0 +1,63 @@
+/* ------------------------------
+   FONT SETUP
+--------------------------------*/
+:root {
+  --font-header: "Georgia", serif;
+  --font-body: "Open Sans", system-ui, sans-serif;
+}
+
+/* ------------------------------
+   COLOR TOKENS (from your palette)
+   Adjust hex values to match exactly.
+--------------------------------*/
+
+/* BACKGROUND */
+:root {
+  --bg-main: #f5f2ef;         /* light beige */
+  --bg-dark: #2b2b2b;         /* dark charcoal */
+}
+
+/* TEXT */
+:root {
+  --text-header: #2b2b2b;
+  --text-body: #4a4a4a;
+  --text-muted: #7d7d7d;
+
+/* LINKS */
+  --link: #a98f92;           /* soft rose-grey */
+  --link-hover: #856f72;
+}
+
+/* ACCENTS */
+:root {
+  --accent-1: #b68896;       /* dusty rose */
+  --accent-2: #cda7b4;       /* blush */
+  --accent-3: #7d8f82;       /* sage */
+  --accent-4: #9aaa9a;       /* light sage */
+}
+
+/* SYSTEM */
+:root {
+  --system-yellow-1: #d5b06b;
+  --system-yellow-2: #e6c98d;
+  --system-red-1: #b77070;
+  --system-red-2: #d29b9b;
+}
+
+/* BUTTONS */
+:root {
+  --btn-bg: #4a4a4a;
+  --btn-bg-hover: #3c3c3c;
+  --btn-text: #ffffff;
+}
+
+/* Chat bubble examples */
+:root {
+  --chat-user-bg: #eae6e4;
+  --chat-ai-bg: #839c87;
+  --chat-border: #b68f96;
+}
+
+/* ------------------------------
+   GLOBAL
+------------

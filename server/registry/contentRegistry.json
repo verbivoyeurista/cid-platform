@@ -1,0 +1,25 @@
+{
+  "text.label.onboarding.firstName.en": "First name",
+  "text.label.onboarding.lastName.en": "Last name",
+  "text.label.onboarding.birthDate.en": "Date of birth",
+  "text.label.onboarding.address.en": "Shipping address",
+  "text.label.onboarding.phoneNumber.en": "Phone number",
+  "text.label.onboarding.verificationCode.en": "Verification code",
+
+  "text.placeholder.onboarding.firstName.en": "Jane",
+  "text.placeholder.onboarding.lastName.en": "Doe",
+  "text.placeholder.onboarding.birthDate.en": "MM/DD/YYYY",
+  "text.placeholder.onboarding.address.en": "123 Main Street, City, State",
+  "text.placeholder.onboarding.phoneNumber.en": "123-456-7890",
+  "text.placeholder.onboarding.verificationCode.en": "Enter 6-digit code",
+
+  "text.message.onboarding.verificationIntro.en": "We’ll send you a verification code.",
+  "text.message.onboarding.verificationSent.en": "We sent it to {{phone.masked}}",
+  "text.message.onboarding.codeInvalid.en": "The code you entered is invalid. Try again.",
+  "text.message.onboarding.resendCode.en": "Resend code",
+
+  "text.legal.onboarding.ageRequirement.en": "Pay and accept money from friends and businesses, emoji and comments encouraged. Must be at least 18 years old.",
+  "text.legal.onboarding.identityVerification.en": "Your information helps us verify your identity and comply with federal requirements.",
+  "text.legal.onboarding.acceptance.en": "Please review and accept Venmo’s User Agreement and Privacy Policy before continuing.",
+  "text.legal.onboarding.smsConsent.en": "By tapping Next, you confirm your number and agree to receive a verification code. Carrier fees may apply."
+}

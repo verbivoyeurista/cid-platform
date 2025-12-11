@@ -9,7 +9,7 @@ const router = express.Router();
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Absolute path to registry JSON
+// Absolute path to registry JSON **inside the app**
 const registryPath = path.join(__dirname, "../../registry/contentRegistry.json");
 
 let registry = {};
@@ -21,21 +21,16 @@ try {
   console.error("❌ Failed to load contentRegistry.json:", err);
 }
 
-// ✅ NEW: Return FULL registry
+// Return full registry
 router.get("/", (req, res) => {
   res.json(registry);
 });
 
-// ✅ Existing: Return single key
+// Return single key
 router.get("/:key", (req, res) => {
   const key = req.params.key;
   const value = registry[key] || null;
-
-  res.json({
-    key,
-    value,
-    found: Boolean(value)
-  });
+  res.json({ key, value, found: Boolean(value) });
 });
 
 export default router;

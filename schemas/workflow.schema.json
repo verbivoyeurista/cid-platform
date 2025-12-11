@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "cid://workflow",
+  "title": "CID Workflow Schema",
+  "description": "Tracks status and approvals for a CID string.",
+  "type": "object",
+  "required": ["string_id", "status"],
+  "properties": {
+    "string_id": { "type": "string" },
+    "status": { "type": "string", "enum": ["draft", "reviewed", "approved", "deprecated"] },
+    "submitted_by": { "type": "string" },
+    "approved_by": { "type": ["string", "null"] },
+    "history": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "action": { "type": "string" },
+          "actor": { "type": "string" },
+          "timestamp": { "type": "string", "format": "date-time" }
+        }
+      }
+    }
+  }
+}

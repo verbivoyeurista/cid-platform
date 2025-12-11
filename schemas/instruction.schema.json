@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "cid://instruction",
+  "title": "CID Instruction Schema",
+  "description": "Structured content instruction rules for CID generation engine.",
+  "type": "object",
+  "required": ["component", "intent"],
+  "properties": {
+    "component": { "type": "string" },
+    "intent": { "type": "string" },
+    "rules": {
+      "type": "object",
+      "properties": {
+        "tone": { "type": "string" },
+        "length": { "type": "string" },
+        "constraints": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "examples": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "anti_examples": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}

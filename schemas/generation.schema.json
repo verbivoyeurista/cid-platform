@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "cid://generation",
+  "title": "CID Generation Instruction Output",
+  "description": "Resolves a key into a structured instruction object for the generation layer.",
+  "type": "object",
+  "properties": {
+    "input_key": { "type": "string" },
+    "resolved": {
+      "type": "object",
+      "properties": {
+        "component": { "type": "string" },
+        "variant": { "type": "string" },
+        "context": { "type": "string" },
+        "intent": { "type": "string" },
+        "locale": { "type": "string" }
+      }
+    },
+    "instruction": { "$ref": "instruction.schema.json" }
+  }
+}

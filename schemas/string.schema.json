@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "cid://string",
+  "title": "CID String Record",
+  "description": "A canonical content string record for UI.",
+  "type": "object",
+  "required": ["id", "component", "context", "intent", "locale", "text"],
+  "properties": {
+    "id": { "type": "string" },
+    "component": { "type": "string" },
+    "variant": { "type": "string" },
+    "context": { "type": "string" },
+    "intent": { "type": "string" },
+    "locale": { "type": "string" },
+    "text": { "type": "string" },
+    "status": { "type": "string", "enum": ["draft", "canonical", "deprecated"] },
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "length": { "type": "integer" },
+        "usage_count": { "type": "integer" }
+      }
+    }
+  }
+}

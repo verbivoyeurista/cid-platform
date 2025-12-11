@@ -13,15 +13,19 @@ app.use(express.json());
 import stringsRoute from "./routes/strings.js";
 app.use("/api/strings", stringsRoute);
 
-// ---- BASIC HEALTH CHECK ----
+// ---- BASIC ROOT + HEALTH CHECK ----
+app.get("/", (req, res) => {
+  res.json({ ok: true, message: "CID Platform backend is running" });
+});
+
 app.get("/health", (req, res) => {
   res.json({ ok: true });
 });
 
 // ---- START SERVER ----
-const PORT = process.env.PORT || 3001;
+// Railway injects PORT; default to 8080 for local dev
+const PORT = process.env.PORT || 8080;
 
-app.listen(PORT, () => {
+app.listen(PORT, "0.0.0.0", () => {
   console.log(`CID Platform server running on port ${PORT}`);
 });
-

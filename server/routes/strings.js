@@ -15,4 +15,5 @@ let registry = {};
 try {
   const raw = fs.readFileSync(registryPath, "utf8");
   registry = JSON.parse(raw);
-  console.log("✅ Registry loaded with", Object.keys
+  console.log("✅ Registry loaded with", Object.keys(registry));
+

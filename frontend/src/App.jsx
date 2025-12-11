@@ -7,9 +7,11 @@ export default function App() {
 
   // Load entire registry
   useEffect(() => {
-    fetch("http://localhost:3001/api/strings")
+    const apiBase = import.meta.env.VITE_API_BASE_URL || "http://localhost:8080";
+    fetch(`${apiBase}/api/strings`)
       .then((res) => res.json())
-      .then((data) => setRegistry(data));
+      .then((data) => setRegistry(data))
+      .catch((err) => console.error("Failed to load registry:", err));
   }, []);
 
   const keys = Object.keys(registry);
